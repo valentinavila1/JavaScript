@@ -51,8 +51,9 @@ const pizzas = [
 // a)  Las pizzas que tengan un id impar.
 
 /* const pizzaId = (ArrayPizza) => {
-  ArrayPizza.forEach((id) => {
-    if (id.id % 2 === 1) {
+  const pizzasImpares = ArrayPizza.filter((pizza) => pizza.id % 2 === 1);
+  pizzasImpares.forEach((pizza) => {
+    if (pizza.id % 2 === 1) {
       return console.log(`La ${id.nombre} tiene el ID ${id.id} y es Impar`);
     }
   });
