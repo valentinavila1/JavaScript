@@ -79,10 +79,10 @@
         <div class="products__container">
           <div class="products__text">
             <h2>/productos</h2>
-            <a href="#">Ver todo</a>
+            <button class="category active">Ver todo</button>
           </div>
           <div class="products__cards">
-            <div class="card">
+            <div class="card" data-category="networkcard">
               <img src="./imgs/vga-img.png" alt="network-card" />
               <div class="card__info">
                 <h4>Placas de Video</h4>
@@ -90,7 +90,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-category="powersupplies">
               <img src="./imgs/power-supply-img.png" alt="power-supplies" />
               <div class="card__info">
                 <h4>Fuentes</h4>
@@ -98,7 +98,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-category="coolers">
               <img src="./imgs/cpu-fan.png" alt="fun" />
               <div class="card__info">
                 <h4>Coolers</h4>
@@ -106,7 +106,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-category="motherboards">
               <img src="./imgs/motherboard-img.png" alt="motherboard" />
               <div class="card__info">
                 <h4>Placas Madre</h4>
@@ -114,7 +114,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-category="peripherals">
               <img src="./imgs/mouse-img.png" alt="peripherals" />
               <div class="card__info">
                 <h4>Periféricos</h4>
@@ -123,6 +123,10 @@
             </div>
           </div>
         </div>
+        <hr class="hr" />
+        <div class="products__items"></div>
+
+        <button class="btn__load">Ver más</button>
       </section>
       <section id="contact">
         <div class="contact__container">
@@ -159,5 +163,7 @@
       <img src="./imgs/logoweb.png" alt="milo-logo" />
       <a href="#">Políticas de Privacidad</a>
     </footer>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -136,9 +136,15 @@
   }
 
   .navbar-list {
-    background: #8fff6a;
+    background: rgb(17, 17, 18);
+    background: linear-gradient(
+      180deg,
+      rgba(17, 17, 18, 1) 0%,
+      rgba(28, 28, 30, 1) 97%,
+      rgba(143, 255, 106, 1) 100%
+    );
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(60vh - 80px);
     position: absolute;
     top: 115px;
     left: 0;
@@ -235,9 +241,15 @@
   }
 
   .navbar-list {
-    background: #8fff6a;
+    background: rgb(17, 17, 18);
+    background: linear-gradient(
+      180deg,
+      rgba(17, 17, 18, 1) 0%,
+      rgba(28, 28, 30, 1) 97%,
+      rgba(143, 255, 106, 1) 100%
+    );
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(60vh - 80px);
     position: absolute;
     top: 115px;
     left: 0;
@@ -288,6 +300,10 @@
   .btn__two a {
     padding: 16px;
     font-size: 12px;
+  }
+
+  .hr {
+    width: 200px;
   }
 
   .aboutus__text h2 {
@@ -356,5 +372,25 @@
   .btn__one a,
   .btn__two a {
     padding: 10px;
+  }
+
+  .navbar-list {
+    background: rgb(17, 17, 18);
+    background: linear-gradient(
+      180deg,
+      rgba(17, 17, 18, 1) 0%,
+      rgba(28, 28, 30, 1) 97%,
+      rgba(143, 255, 106, 1) 100%
+    );
+    width: 100%;
+    height: calc(60vh - 80px);
+    position: absolute;
+    top: 115px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    display: none;
   }
 }

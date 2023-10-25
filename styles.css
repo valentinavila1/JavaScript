@@ -214,14 +214,16 @@
   font-size: 24px;
 }
 
-.products__text a {
+.products__text button {
+  background-color: var(--background-color);
   color: var(--hover-color);
   border: 1px solid var(--button-color);
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
+  font-size: 20px;
 }
 
-.products__text a:hover {
+.products__text button:hover {
   background-color: var(--button-color);
   color: var(--secondary-color);
 }
@@ -238,8 +240,8 @@
   align-items: center;
   background-color: var(--cards-color);
   border-radius: 12px;
-  width: 350px;
-  height: 300px;
+  width: 340px;
+  height: 280px;
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -269,6 +271,93 @@
 .card__info p {
   font-size: 12px;
   color: var(--subtext-color);
+}
+
+.hr {
+  border-color: var(--button-color);
+  width: 600px;
+}
+
+.products__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cards-color);
+  border: 1px solid var(--button-color);
+  border-radius: 10px;
+  width: 410px;
+  height: 600px;
+  cursor: pointer;
+  padding: 15px;
+  color: var(--hover-color);
+}
+
+.item h4 {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.item__info span {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.btn__buy {
+  background-color: var(--background-color);
+  color: var(--hover-color);
+  border: 1px solid var(--button-color);
+  border-radius: 8px;
+  padding: 10px 30px;
+}
+
+.btn__buy:hover {
+  background-color: var(--hover-color);
+  color: var(--background-color);
+  border: 1px solid var(--background-color);
+}
+
+.btn__load {
+  background-color: var(--background-color);
+  color: var(--hover-color);
+  border: 1px solid var(--button-color);
+  border-radius: 12px;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__load:hover {
+  background-color: var(--button-color);
+  color: var(--secondary-color);
+}
+
+.hidden {
+  display: none;
 }
 
 /*---------------- CONTACT ------------- */
