@@ -1,0 +1,386 @@
+:root {
+  --background-color: #111112;
+  --primary-color: #24fe41;
+  --secondary-color: #1c1c1e;
+  --cards-color: #262628;
+  --subtext-color: #888888;
+  --hover-color: #ffffff;
+  --button-color: #8fff6a;
+  --cards-hover-color: #8dfd44;
+}
+
+* {
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Kanit", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 30px;
+}
+
+.header img {
+  height: 55px;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: var(--cards-color);
+  padding: 16px 32px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbar i {
+  display: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.navbar a {
+  color: var(--subtext-color);
+}
+
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+.login a {
+  color: var(--hover-color);
+  border: 1px solid var(--button-color);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.login a:hover {
+  background-color: var(--button-color);
+  color: var(--secondary-color);
+}
+/*  --------- HERO --------------- */
+
+#hero {
+  max-width: 2000px;
+  background-color: var(--background-color);
+}
+
+.hero__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__text {
+  color: var(--hover-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.hero__text h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+.hero__text p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--subtext-color);
+  padding: 10px;
+}
+
+.hero__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 25px;
+}
+
+.btn__one:hover {
+  transform: translateY(10%);
+}
+
+.btn__two:hover {
+  transform: translateY(10%);
+}
+
+.btn__one a,
+.btn__two a {
+  border: 1px solid var(--button-color);
+  color: var(--hover-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn__one a {
+  background-color: var(--button-color);
+  color: var(--secondary-color);
+}
+
+.hero__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__img img {
+  height: 650px;
+  width: 650px;
+  cursor: pointer;
+}
+
+/*---------- About US ------------*/
+
+#aboutus {
+  max-width: 2000px;
+  background-color: var(--secondary-color);
+}
+
+.aboutus__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.aboutus__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus__text h2 {
+  color: var(--hover-color);
+  font-weight: 400;
+  font-size: 25px;
+  padding: 50px;
+  text-align: center;
+}
+
+.aboutus__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--hover-color);
+  box-shadow: 3px 3px;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.aboutus__slide img {
+  height: 50px;
+}
+
+/*--------- CARDS / PRODUCTS --------- */
+
+#products {
+  max-width: 2000px;
+  background-color: var(--background-color);
+  padding: 60px 0px;
+}
+
+.products__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-color);
+  padding: 30px;
+  font-size: 24px;
+}
+
+.products__text a {
+  color: var(--hover-color);
+  border: 1px solid var(--button-color);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.products__text a:hover {
+  background-color: var(--button-color);
+  color: var(--secondary-color);
+}
+
+.products__cards {
+  display: flex;
+  padding: 20px 0px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cards-color);
+  border-radius: 12px;
+  width: 350px;
+  height: 300px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px var(--secondary-color);
+  transform: translateY(-4%);
+  background-color: var(--cards-hover-color);
+}
+
+.card img {
+  height: 200px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.card__info h4 {
+  color: var(--hover-color);
+}
+
+.card__info p {
+  font-size: 12px;
+  color: var(--subtext-color);
+}
+
+/*---------------- CONTACT ------------- */
+
+#contact {
+  max-width: 2000px;
+  background-color: var(--background-color);
+  padding: 100px 0px;
+}
+
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--subtext-color);
+  padding: 30px;
+}
+
+.contact__info h1 {
+  font-size: 32px;
+  color: var(--hover-color);
+}
+
+.contact__socialmedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.contact__socialmedia img:hover {
+  transform: translateY(-10%);
+  color: var(--hover-color);
+}
+
+.contact__newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-color);
+  font-size: 18px;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.newsletter__form input[type="email"] {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid var(--primary-color);
+  height: 32px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 16px;
+}
+
+.contact__info img,
+.contact__newsletter img {
+  height: 60px;
+}
+
+.newsletter__form input[type="image"] {
+  height: 32px;
+  padding: 0px 10px;
+}
+.newsletter__form input[type="image"]:hover {
+  transition: all 0.5s ease;
+  transform: translateX(20%);
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  max-width: 2000px;
+  background-color: var(--background-color);
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid var(--subtext-color);
+}
+
+.footer p {
+  color: var(--subtext-color);
+  font-weight: 400;
+}
+
+.footer a {
+  color: var(--subtext-color);
+}
+
+.footer img {
+  height: 40px;
+}
+
+.footer a:hover {
+  color: var(--hover-color);
+}
+
+/*------------------------------------*/

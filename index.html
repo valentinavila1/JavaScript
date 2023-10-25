@@ -2,24 +2,162 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E1 - JAVASCRIPT</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>MILO/Hardware</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,700;1,300&display=swap");
+      @import url(styles.css);
+      @import url(mediaqueries.css);
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-
   <body>
-    <h1>
-      E1-JS : MÉTODOS DE ARRAY
-      <img
-        src="https://renderer-v2.vercel.app/_next/image?url=https%3A%2F%2Fapi.typedream.com%2Fv0%2Fdocument%2Fpublic%2Fac4f6f0d-8160-4e58-9d18-cb5e7c880fb6_Recurso_32_png.png&w=384&q=75"
-        alt="logo"
-        class="logo"
-      />
-    </h1>
-    <h2>En consola se mostrarán los resultados de los ejercicios</h2>
-    <img src="./pizza.png" alt="imagen de pizza" class="pizza" />
-    <footer>Hecho con ❤️ en Nucba</footer>
-    <script src="./index.js"></script>
+    <header class="header">
+      <img src="./imgs/logoweb.png" alt="logo" />
+      <nav class="navbar">
+        <!--Menú-->
+        <input type="checkbox" id="toggle-menu" />
+        <label for="toggle-menu"><i class="fa-solid fa-bars"></i> </label>
+        <!--Menú-->
+
+        <ul class="navbar-list">
+          <li>
+            <a href="#hero" id="home">Home</a>
+          </li>
+          <li>
+            <a href="#aboutus">Sobre Nosotros</a>
+          </li>
+          <li>
+            <a href="#contact">Contactanos</a>
+          </li>
+          <li>
+            <a href="#products">Productos</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="login">
+        <a href="./login.html">Ingresá</a>
+      </div>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero__container">
+          <div class="hero__text">
+            <h1>Diseñá el equipo de tus SUEÑOS</h1>
+            <p>Upgradeá, modernizate y subí al siguiente nivel</p>
+            <div class="hero__btns">
+              <div class="btn__one"><a href="#">Comprar Ahora</a></div>
+              <div class="btn__two"><a href="#">Empezar mi armado</a></div>
+            </div>
+          </div>
+          <div class="hero__img">
+            <img src="./imgs/technology5.png" alt="pc-img" />
+          </div>
+        </div>
+      </section>
+      <section id="aboutus">
+        <div class="aboutus__container">
+          <div class="aboutus__text">
+            <h2>
+              En MILO somos partners certificados con las principales marcas de
+              tecnología, trayéndote lo mejor hace más de 20 años
+            </h2>
+          </div>
+          <div class="aboutus__slide">
+            <img src="./imgs/aorus-logo.png" alt="" />
+            <img src="./imgs/logitech-logo.png" alt="" />
+            <img src="./imgs/intel-logo.png" alt="" />
+            <img src="./imgs/nvidia-logo.png" alt="" />
+            <img src="./imgs/redragon-logo.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="products">
+        <div class="products__container">
+          <div class="products__text">
+            <h2>/productos</h2>
+            <a href="#">Ver todo</a>
+          </div>
+          <div class="products__cards">
+            <div class="card">
+              <img src="./imgs/vga-img.png" alt="network-card" />
+              <div class="card__info">
+                <h4>Placas de Video</h4>
+                <p>Desde $59999</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="./imgs/power-supply-img.png" alt="power-supplies" />
+              <div class="card__info">
+                <h4>Fuentes</h4>
+                <p>Desde $14999</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="./imgs/cpu-fan.png" alt="fun" />
+              <div class="card__info">
+                <h4>Coolers</h4>
+                <p>Desde $7999</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="./imgs/motherboard-img.png" alt="motherboard" />
+              <div class="card__info">
+                <h4>Placas Madre</h4>
+                <p>Desde $21999</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="./imgs/mouse-img.png" alt="peripherals" />
+              <div class="card__info">
+                <h4>Periféricos</h4>
+                <p>Desde $7999</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contact__container">
+          <div class="contact__info">
+            <img src="./imgs/logoweb.png" alt="milo-logo" />
+            <h1>/contactanos</h1>
+
+            <div class="contact__socialmedia">
+              <img src="./imgs/facebook-icon.png" alt="facebook-icon" />
+              <img src="./imgs/instagram-icon.png" alt="instagram-icon" />
+              <img src="./imgs/discord-icon.png" alt="discord-icon" />
+            </div>
+          </div>
+          <div class="contact__newsletter">
+            <h2>
+              /suscribite a nuestro newsletter y recibí novedades, ofertas y
+              descuentos
+            </h2>
+            <div class="newsletter__form">
+              <input type="email" placeholder="Ingresá tu email" required />
+              <input
+                type="image"
+                id="email"
+                alt="submit"
+                src="/imgs/right-arrow.png"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>@MILO/Hardware 2023. Todos los derechos reservados</p>
+      <img src="./imgs/logoweb.png" alt="milo-logo" />
+      <a href="#">Políticas de Privacidad</a>
+    </footer>
   </body>
 </html>

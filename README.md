@@ -1,2 +1,1 @@
-# JavaScript
-GO JS !
+# Mi primera landing :')
