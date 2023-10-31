@@ -1,7 +1,8 @@
 const ProductsContainer = document.querySelector(".products__items");
 const MoreBtn = document.querySelector(".btn__load");
-const CategoriesContainer = document.querySelector(".products__container");
-const CardList = document.querySelectorAll(".card");
+const CategoriesContainer = document.querySelector(".products__cards");
+const CategoriesBtns = document.querySelectorAll(".card");
+const hr = document.querySelector(".hr2");
 
 const TemplateProducts = (product) => {
   return `
@@ -30,9 +31,63 @@ const MoreProducts = () => {
   }
 };
 
+// sacar el boton ver mas cuando se ingresa en una categoria
+const MoreBtnDelete = () => {
+  if (!AppState.activeFilter) {
+    MoreBtn.classList.remove("hidden");
+  }
+  MoreBtn.classList.add("hidden");
+};
+// funcion para aplicar el filtro, si los botones no estan activos que no hagan nada // también para filtrar los PRODUCTOS del botón "VER TODO"
+const ApplyFilter = ({ target }) => {
+  if (!InactiveBtns(target)) return;
+  FilterState(target);
+  ProductsContainer.innerHTML = "";
+  if (AppState.activeFilter) {
+    RenderizingSelectedProduct(); // poner el () para parametros muy importante!!!!!!111
+    return;
+  }
+  RenderizingProducts(AppState.products[0]); // si no tiene active filter, que renderize el primer array de nuevo
+};
+
+// funcion para renderizar productos según el boton elegido
+const RenderizingSelectedProduct = () => {
+  const SelectedProduct = ProductsData.filter(
+    (product) => product.category === AppState.activeFilter
+  );
+  RenderizingProducts(SelectedProduct); // renderizar los productos filtrados
+};
+
+// botones que contengan la clase card y no esten activos
+const InactiveBtns = (e) => {
+  return e.classList.contains("card") && !e.classList.contains("active");
+};
+
+// funcion para cambiar la card activa
+const FilterState = (card) => {
+  AppState.activeFilter = card.dataset.category;
+  changeActiveState(AppState.activeFilter);
+  MoreBtnDelete(AppState.activeFilter);
+};
+
+// cambiar el boton activo si el boton no es igual, funciona adentro del filtro para cambiar la card activa
+const changeActiveState = (category) => {
+  const categories = [...CategoriesBtns];
+  //console.log(category);
+
+  categories.forEach((btn) => {
+    if (btn.dataset.category !== category) {
+      btn.classList.remove("active");
+      return;
+    }
+    btn.classList.add("active");
+  });
+};
+
 // funcion que inicializa con la página
 const init = () => {
   RenderizingProducts(AppState.products[0]); // renderizamos los productos con el appstate y la primera division del array
   MoreBtn.addEventListener("click", MoreProducts);
+  CategoriesContainer.addEventListener("click", ApplyFilter);
 };
 init();

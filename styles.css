@@ -214,28 +214,16 @@
   font-size: 24px;
 }
 
-.products__text button {
-  background-color: var(--background-color);
-  color: var(--hover-color);
-  border: 1px solid var(--button-color);
-  border-radius: 12px;
-  padding: 20px;
-  font-size: 20px;
-}
-
-.products__text button:hover {
-  background-color: var(--button-color);
-  color: var(--secondary-color);
-}
-
 .products__cards {
   display: flex;
   padding: 20px 0px;
+  gap: 10px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: var(--cards-color);
@@ -244,12 +232,6 @@
   height: 280px;
   cursor: pointer;
   transition: all 0.5s ease;
-}
-
-.card:hover {
-  box-shadow: 5px 5px 20px var(--secondary-color);
-  transform: translateY(-4%);
-  background-color: var(--cards-hover-color);
 }
 
 .card img {
@@ -273,9 +255,21 @@
   color: var(--subtext-color);
 }
 
+.active {
+  box-shadow: 5px 5px 20px var(--secondary-color);
+  transform: translateY(-4%);
+  background-color: var(--cards-hover-color);
+}
+
 .hr {
   border-color: var(--button-color);
   width: 600px;
+  margin-top: 15px;
+}
+.hr2 {
+  border-color: var(--button-color);
+  width: 400px;
+  margin-top: 15px;
 }
 
 .products__items {
@@ -323,7 +317,7 @@
 }
 
 .item img {
-  width: 100%;
+  width: 95%;
 }
 
 .btn__buy {
@@ -409,6 +403,7 @@
   align-items: center;
   color: var(--hover-color);
   font-size: 18px;
+  padding: 10px;
 }
 
 .newsletter__form {
