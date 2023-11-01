@@ -35,6 +35,7 @@ const MoreProducts = () => {
 const MoreBtnDelete = () => {
   if (!AppState.activeFilter) {
     MoreBtn.classList.remove("hidden");
+    return;
   }
   MoreBtn.classList.add("hidden");
 };
