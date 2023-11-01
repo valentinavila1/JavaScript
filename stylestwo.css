@@ -56,13 +56,16 @@ body {
 .login input[type="password"],
 .register input[type="text"],
 .register input[type="password"],
-.register input[type="email"] {
+.register input[type="email"],
+.register input[type="number"] {
   border: none;
+  outline: none;
   background: transparent;
   border-bottom: 1px solid #ffffff;
   height: 32px;
   font-size: 14px;
   color: #ffffff;
+  padding: 5px;
 }
 
 .login input[type="submit"],
@@ -88,8 +91,27 @@ body {
 
 .button-home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding-left: 24px;
+}
+
+.form__input {
+  padding: 15px;
+}
+
+.form__input.error input {
+  border: 1px solid #ff0000;
+}
+
+.form__input.success input {
+  border: 1px solid #8fff6a;
+}
+
+.form__input small {
+  color: #ff0000;
+  font-weight: 300;
+  display: none;
 }
