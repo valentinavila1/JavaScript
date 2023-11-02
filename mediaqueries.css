@@ -223,10 +223,6 @@
   height: 170px;
 }
 
-.navbar-list {
-  display: none;
-}
-
 .navbar-list.show {
   display: flex;
   animation: fadeIn 0.5s ease-in-out;
