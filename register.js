@@ -117,7 +117,8 @@ const CheckPhone = (input) => {
 };
 
 // checkear el form
-const CheckForm = () => {
+const CheckForm = (e) => {
+  // e.preventDefault();
   // El preventdefault me reinicia y no logea ???
   let isValidName = CheckImputs(InputName);
   let isValidEmail = CheckEmails(InputEmail);
@@ -128,12 +129,13 @@ const CheckForm = () => {
   if (FormValid) {
     users.push({
       name: InputName.value,
-      Email: InputEmail.value,
-      Password: InputPass.value,
-      Phone: InputPhone.value,
+      email: InputEmail.value,
+      password: InputPass.value,
+      phone: InputPhone.value,
     });
     saveLocalStorage(users);
-    alert("Te registraste perfecto");
+    alert("Te registraste perfecto!");
+
     window.location.href = "login.html";
   } else {
     alert("Llená todo el formulario!");
