@@ -71,6 +71,16 @@
   border-radius: 12px;
 }
 
+#logout-button {
+  color: var(--hover-color);
+  border: 1px solid var(--button-color);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
 .login a:hover {
   background-color: var(--button-color);
   color: var(--secondary-color);

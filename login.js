@@ -2,15 +2,15 @@ const FormCompleto = document.getElementById("formulario");
 const EmailInput = document.getElementById("input-email");
 const PassInput = document.getElementById("input-pass");
 const PassError = document.getElementById("error");
+
 // console.log(PassError);
 //console.log(PassInput, PassError, Form);
-// console.log(EmailInput);
 
 const users = JSON.parse(localStorage.getItem("users")) || [];
-//console.log("Usuarios registrados LS:", users);
+// sconsole.log("Usuarios registrados LS:", users);
 
 const saveSessionStorage = (user) => {
-  sessionStorage.setItem("activeUser", JSON.stringify(user));
+  sessionStorage.setItem("activeuser", JSON.stringify(user));
 };
 
 // input vacio
@@ -75,19 +75,31 @@ const ValidAccount = () => {
 
   // alert("en linea");
   valid = true;
+
   msgError.textContent = "";
   FormCompleto.reset();
+
   return valid;
 };
 
+/* const usersSS = (input) => {
+  //const user = users.find((user) => user.email === EmailInput.value.trim());
+
+  //return user === input.value.trim();
+};  */
+
 const login = (e) => {
   e.preventDefault();
+  // console.log(users.find((user) => user.email === EmailInput.value));
   if (ValidAccount()) {
-    const user = users.find((user) => user.email === EmailInput.value.trim());
-    saveSessionStorage(user);
+    const user = users.find((user) => user.email === EmailInput.value.trim()); // da undefined
+    // console.log("Usuario:", user);
+    saveSessionStorage(user); // Registro ok Login ok pero da undefined en el session storage
+    alert(`Bienvenido!`);
     window.location.href = "./index.html";
   }
 };
+
 const init = () => {
   FormCompleto.addEventListener("submit", login);
 };

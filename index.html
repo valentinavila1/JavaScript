@@ -23,23 +23,28 @@
         <label for="toggle-menu"><i class="fa-solid fa-bars"></i> </label>
         <!--Menú-->
 
-        <ul class="navbar-list">
+        <ul class="navbar-list" id="nav-list">
           <li>
             <a href="#hero" id="home">Home</a>
           </li>
           <li>
-            <a href="#aboutus">Sobre Nosotros</a>
+            <a href="#aboutus" id="aboutUs">Sobre Nosotros</a>
           </li>
           <li>
-            <a href="#contact">Contactanos</a>
+            <a href="#contact" id="contactus">Contactanos</a>
           </li>
           <li>
-            <a href="#products">Productos</a>
+            <a href="#products" id="productos">Productos</a>
           </li>
         </ul>
       </nav>
       <div class="login">
-        <a href="./login.html">Ingresá</a>
+        <a id="login-button" class="login-button" href="./login.html"
+          >Ingresá</a
+        >
+        <div id="logout-button" class="logout-button">
+          Salir<i class="fa fa-sign-out"></i>
+        </div>
       </div>
     </header>
     <main>

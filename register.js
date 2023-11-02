@@ -4,7 +4,6 @@ const InputPass = document.getElementById("password");
 const InputPhone = document.getElementById("phone");
 const InputEmail = document.getElementById("email");
 const InputSubmit = document.getElementById("register");
-const InputDiv = document.querySelector(".form__input");
 
 const users = JSON.parse(localStorage.getItem("users")) || [];
 const saveLocalStorage = () => {
@@ -118,8 +117,8 @@ const CheckPhone = (input) => {
 
 // checkear el form
 const CheckForm = (e) => {
-  // e.preventDefault();
-  // El preventdefault me reinicia y no logea ???
+  //e.preventDefault();
+  // El preventdefault me reinicia, registra y no sale ???
   let isValidName = CheckImputs(InputName);
   let isValidEmail = CheckEmails(InputEmail);
   let isValidPass = CheckPass(InputPass);
@@ -135,8 +134,7 @@ const CheckForm = (e) => {
     });
     saveLocalStorage(users);
     alert("Te registraste perfecto!");
-
-    window.location.href = "login.html";
+    window.location.href = "./pages/login.html";
   } else {
     alert("Llená todo el formulario!");
   }
@@ -156,19 +154,26 @@ const MinMaxCharacters = (input, min, max) => {
 
 // funcion para mostrar el error
 const ErrorImput = (input, message) => {
-  InputDiv.classList.add("error");
+  const InputDiv = input.parentElement;
   InputDiv.classList.remove("success");
+  InputDiv.classList.add("error");
+
   const InputSmall = InputDiv.querySelector("small"); // el queryselector acá solo toma el primero ???
   InputSmall.style.display = "flex";
   InputSmall.textContent = message;
 };
 
-const SuccessImput = (input) => {
-  InputDiv.classList.remove("error");
-  InputDiv.classList.add("success");
-  const ImputSmall = InputDiv.querySelector("small");
+// .forEach((input) => {
+//const msg = "completá los campos";
+//ErrorImput(input, msg);
 
-  ImputSmall.textContent = "";
+const SuccessImput = (input) => {
+  const InputDiv = input.parentElement;
+  InputDiv.classList.add("success");
+  InputDiv.classList.remove("error");
+  const InputSmall = InputDiv.querySelector("small");
+
+  InputSmall.textContent = "";
   // console.log(ImputSmall);
 };
 

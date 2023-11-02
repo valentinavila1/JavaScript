@@ -2,7 +2,26 @@ const ProductsContainer = document.querySelector(".products__items");
 const MoreBtn = document.querySelector(".btn__load");
 const CategoriesContainer = document.querySelector(".products__cards");
 const CategoriesBtns = document.querySelectorAll(".card");
-const hr = document.querySelector(".hr2");
+
+// -------------------------------- menu hamburg con js ----------------------------
+const menuToggle = document.getElementById("toggle-menu");
+const navList = document.getElementById("nav-list");
+const navBtns = document.querySelectorAll(".navbar-list a");
+// console.log(menuToggle, navList, navBtns);
+menuToggle.addEventListener("click", () => {
+  navList.classList.toggle("show");
+
+  // menuToggle.classList.toggle("close");
+});
+
+navList.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    // tag a ?
+    navList.classList.remove("show");
+    menuToggle.checked = false; // el toggle se cierra
+  }
+});
+// ------------------------------------------------------------------------------------- //
 
 const TemplateProducts = (product) => {
   return `
