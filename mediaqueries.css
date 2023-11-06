@@ -144,23 +144,19 @@
       rgba(143, 255, 106, 1) 100%
     );
     width: 100%;
-    height: calc(60vh - 80px);
+    height: calc(60vh - 90px);
     position: absolute;
     top: 115px;
     left: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 0px 20px;
     display: none;
   }
 
   .navbar i {
     display: block;
-  }
-
-  #toggle-menu:checked ~ .navbar-list {
-    display: flex;
   }
 
   .hero__text h1 {
@@ -276,10 +272,6 @@
 
   .navbar i {
     display: block;
-  }
-
-  #toggle-menu:checked ~ .navbar-list {
-    display: flex;
   }
 
   #hero {

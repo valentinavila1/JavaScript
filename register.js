@@ -134,7 +134,7 @@ const CheckForm = (e) => {
     });
     saveLocalStorage(users);
     alert("Te registraste perfecto!");
-    window.location.href = "./pages/login.html";
+    window.location.href = "./login.html";
   } else {
     alert("Llená todo el formulario!");
   }

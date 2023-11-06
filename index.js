@@ -2,26 +2,59 @@ const ProductsContainer = document.querySelector(".products__items");
 const MoreBtn = document.querySelector(".btn__load");
 const CategoriesContainer = document.querySelector(".products__cards");
 const CategoriesBtns = document.querySelectorAll(".card");
-
-// -------------------------------- menu hamburg con js ----------------------------
-const menuToggle = document.getElementById("toggle-menu");
+const menuToggle = document.querySelector(".menu");
 const navList = document.getElementById("nav-list");
-const navBtns = document.querySelectorAll(".navbar-list a");
-// console.log(menuToggle, navList, navBtns);
-menuToggle.addEventListener("click", () => {
+const Total = document.querySelector(".cart__total");
+const BtnBuy = document.querySelector(".cart__btn__buy");
+const BtnEmptyCart = document.querySelector(".btn__cart__delete");
+const ProductHandler = document.querySelector(".cart__product__handler");
+
+// -------------------------------- menu hamburguesa -------------------------------- //
+
+// console.log(menuToggle, navList)
+const toggleMenu = () => {
   navList.classList.toggle("show");
 
-  // menuToggle.classList.toggle("close");
-});
+  if (cart.classList.contains("open__cart")) {
+    cart.classList.remove("open__cart");
+
+    return;
+  }
+  overlay.classList.toggle("show");
+};
 
 navList.addEventListener("click", (e) => {
   if (e.target.tagName === "A") {
-    // tag a ?
-    navList.classList.remove("show");
-    menuToggle.checked = false; // el toggle se cierra
+    menuToggle.checked = false; // para cerrar el menú
   }
 });
-// ------------------------------------------------------------------------------------- //
+
+// --------------------------------------- CARRITO ----------------------------------- //
+
+const cartBtn = document.querySelector(".cart-btn");
+const cart = document.querySelector(".cart");
+// menuToggle = .menu
+const menu = document.querySelector(".navbar-list");
+const overlay = document.querySelector(".overlay");
+
+const toggleCart = () => {
+  cart.classList.toggle("open__cart");
+
+  if (navList.classList.contains("show")) {
+    navList.classList.remove("show");
+
+    return;
+  }
+  overlay.classList.toggle("show");
+};
+
+const CloseWindowClick = () => {
+  cart.classList.remove("open__cart");
+  navList.classList.remove("show");
+  overlay.classList.remove("show");
+};
+
+// ----------------------------------------------------------------------------------- //
 
 const TemplateProducts = (product) => {
   return `
@@ -64,7 +97,7 @@ const ApplyFilter = ({ target }) => {
   FilterState(target);
   ProductsContainer.innerHTML = "";
   if (AppState.activeFilter) {
-    RenderizingSelectedProduct(); // poner el () para parametros muy importante!!!!!!111
+    RenderizingSelectedProduct(); // () !!!!!!!!111
     return;
   }
   RenderizingProducts(AppState.products[0]); // si no tiene active filter, que renderize el primer array de nuevo
@@ -109,5 +142,8 @@ const init = () => {
   RenderizingProducts(AppState.products[0]); // renderizamos los productos con el appstate y la primera division del array
   MoreBtn.addEventListener("click", MoreProducts);
   CategoriesContainer.addEventListener("click", ApplyFilter);
+  cartBtn.addEventListener("click", toggleCart);
+  menuToggle.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", CloseWindowClick);
 };
 init();

@@ -17,10 +17,13 @@
   <body>
     <header class="header">
       <img src="./imgs/logoweb.png" alt="logo" />
+
       <nav class="navbar">
         <!--Menú-->
-        <input type="checkbox" id="toggle-menu" />
-        <label for="toggle-menu"><i class="fa-solid fa-bars"></i> </label>
+        <div class="menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
         <!--Menú-->
 
         <ul class="navbar-list" id="nav-list">
@@ -38,6 +41,27 @@
           </li>
         </ul>
       </nav>
+      <div class="cart-btn">
+        <i class="fa-solid fa-cart-shopping fa-xl" style="color: #8fff6a"></i>
+      </div>
+
+      <div class="cart">
+        <h2>Tus Productos</h2>
+
+        <hr class="hr2" />
+        <div class="cart__total">
+          <p>Total:</p>
+          <span>$1313131</span>
+        </div>
+        <div class="cart__btn__buy">
+          <button>Comprar</button>
+        </div>
+        <div class="cart__btn__delete">
+          <button>Vaciar carrito</button>
+        </div>
+      </div>
+      <div class="overlay"></div>
+
       <div class="login">
         <a id="login-button" class="login-button" href="./login.html"
           >Ingresá</a
