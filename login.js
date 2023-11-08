@@ -7,7 +7,7 @@ const PassError = document.getElementById("error");
 //console.log(PassInput, PassError, Form);
 
 const users = JSON.parse(localStorage.getItem("users")) || [];
-// sconsole.log("Usuarios registrados LS:", users);
+//console.log("Usuarios registrados LS:", users);
 
 const saveSessionStorage = (user) => {
   sessionStorage.setItem("activeuser", JSON.stringify(user));
@@ -73,12 +73,8 @@ const ValidAccount = () => {
     return;
   }
 
-  // alert("en linea");
   valid = true;
-
   msgError.textContent = "";
-  FormCompleto.reset();
-
   return valid;
 };
 
@@ -90,13 +86,12 @@ const ValidAccount = () => {
 
 const login = (e) => {
   e.preventDefault();
-  // console.log(users.find((user) => user.email === EmailInput.value));
+  console.log(users.find((user) => user.email === EmailInput.value));
   if (ValidAccount()) {
-    const user = users.find((user) => user.email === EmailInput.value.trim()); // da undefined
-    // console.log("Usuario:", user);
-    saveSessionStorage(user); // Registro ok Login ok pero da undefined en el session storage
-    alert(`Bienvenido!`);
-    window.location.href = "./index.html";
+    const user = users.find((user) => user.email === EmailInput.value.trim());
+    saveSessionStorage(user);
+    window.location.href = "../index.html";
+    LoginBtn.classList.add("hidden");
   }
 };
 

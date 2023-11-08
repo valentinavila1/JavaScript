@@ -47,18 +47,15 @@
 
       <div class="cart">
         <h2>Tus Productos</h2>
+        <div class="cart__container"></div>
 
         <hr class="hr2" />
         <div class="cart__total">
-          <p>Total:</p>
-          <span>$1313131</span>
+          <p class="totalword"></p>
+          <span class="totalprice"></span>
         </div>
-        <div class="cart__btn__buy">
-          <button>Comprar</button>
-        </div>
-        <div class="cart__btn__delete">
-          <button>Vaciar carrito</button>
-        </div>
+        <button class="cart__btn__buy">Comprar</button>
+        <button class="cart__btn__delete">Vaciar carrito</button>
       </div>
       <div class="overlay"></div>
 
@@ -78,8 +75,12 @@
             <h1>Diseñá el equipo de tus SUEÑOS</h1>
             <p>Upgradeá, modernizate y subí al siguiente nivel</p>
             <div class="hero__btns">
-              <div class="btn__one"><a href="#">Comprar Ahora</a></div>
-              <div class="btn__two"><a href="#">Empezar mi armado</a></div>
+              <div class="btn__one">
+                <a href="./login.html">Comprar Ahora</a>
+              </div>
+              <div class="btn__two">
+                <a href="./login.html">Empezar mi armado</a>
+              </div>
             </div>
           </div>
           <div class="hero__img">
@@ -87,6 +88,7 @@
           </div>
         </div>
       </section>
+
       <section id="aboutus">
         <div class="aboutus__container">
           <div class="aboutus__text">
@@ -110,7 +112,7 @@
             <h2>/productos</h2>
           </div>
           <div class="products__cards">
-            <button class="card active" id="todo"><span>Ver todo</span></button>
+            <div class="card active" id="todo"><span>Ver todo</span></div>
 
             <div class="card" id="placas" data-category="networkcard">
               <img src="./imgs/vga-img.png" alt="network-card" />
@@ -195,6 +197,10 @@
       <img src="./imgs/logoweb.png" alt="milo-logo" />
       <a href="#">Políticas de Privacidad</a>
     </footer>
+    <div class="add-modal"></div>
+
+    <button id="btn-toTop" class="hidden">TOP</button>
+
     <script src="./data.js"></script>
     <script src="./index.js"></script>
   </body>
