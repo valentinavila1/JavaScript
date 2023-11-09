@@ -90,8 +90,8 @@ const login = (e) => {
   if (ValidAccount()) {
     const user = users.find((user) => user.email === EmailInput.value.trim());
     saveSessionStorage(user);
+    alert("Bienvenido a Milo!");
     window.location.href = "../index.html";
-    LoginBtn.classList.add("hidden");
   }
 };
 
