@@ -469,3 +469,34 @@
     width: 50%;
   }
 }
+
+@media (max-width: 360px) {
+  .cart.open__cart {
+    padding: 10px;
+    width: 80%;
+    right: 5px;
+  }
+
+  .quantity-down,
+  .quantity-up {
+    padding: 2px;
+  }
+
+  .cart__product {
+    padding: 3px;
+  }
+
+  .overlay.show {
+    right: 5px;
+    height: 410vh;
+  }
+
+  .contact__newsletter h2 {
+    padding: 5px;
+  }
+
+  .btn__one a,
+  .btn__two a {
+    font-size: 10px;
+  }
+}
