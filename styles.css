@@ -172,6 +172,7 @@
   border: 1px solid var(--secondary-color);
   padding: 4px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .quantity-down:hover,
