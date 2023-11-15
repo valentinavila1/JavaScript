@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url(styles.css);
+    </style>
+    <title>Pokemon's API</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="pokemon__logo">
+          <img src="./pokemon logo.png" alt="pokemon__logo" />
+        </div>
+        <div class="pokemon__container">
+          <div class="pokemon__search">
+            <form id="form">
+              <input
+                type="number"
+                name="pokemon"
+                class="pokemon__input"
+                placeholder="Buscar pokemón"
+                autocomplete="off"
+              />
+            </form>
+          </div>
+          <div class="pokemon__text">Ingresá un número en la pokédex</div>
+          <div class="pokemon__error"></div>
+          <div class="pokemon__cards__container"></div>
+          <hr class="hr" />
+          <div class="pokemon__loading">
+            <h3>Cargando pokemons...</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./request.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
